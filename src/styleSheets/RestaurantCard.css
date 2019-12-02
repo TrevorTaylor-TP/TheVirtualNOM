@@ -1,9 +1,9 @@
-.List_Image{
-    float: left;
-    height:3rem;
-    width: 3rem;
+.List_Image {
+  float: left;
+  height: 3rem;
+  width: 3rem;
 }
 
-.Rest_Card{
-    border-style: ridge;
+.Rest_Card {
+  border-style: ridge;
 }
