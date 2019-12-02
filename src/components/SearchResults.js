@@ -14,17 +14,9 @@ class SearchResults extends React.Component {
 
   callAPI(location, radius) {
     radius *= 1600;
-    const queryString =
-      "https://thevirtualnomapiproduction.herokuapp.com/search/?location=" +
-      location +
-      "&radius=" +
-      radius;
-    const testString =
-      "http://localhost:9000/search/?location=" +
-      location +
-      "&radius=" +
-      radius;
-    console.log("testString", testString);
+    const queryString = "https://thevirtualnomapiproduction.herokuapp.com/search/?location=" + location+ "&radius=" + radius;
+    const testString = "http://localhost:9000/search/?location=" + location+ "&radius=" + radius;
+    console.log('testString', testString)
     // fetch("https://thevirtualnomapiproduction.herokuapp.com/search/")
     // fetch("http://localhost:9000/search")
     fetch(queryString)
@@ -54,6 +46,7 @@ class SearchResults extends React.Component {
           {json.map((item, i) => {
             return (
               <li key={i}>
+                {/* <RestaurantCard>{item.name}</RestaurantCard> */}
                 <RestaurantCard>{item}</RestaurantCard>
               </li>
             );
