@@ -1,9 +1,27 @@
 .List_Image {
-  float: left;
-  height: 3rem;
-  width: 3rem;
+  display: block;
+  position: absolute;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.Image_Holder {
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
 }
 
 .Rest_Card {
   border-style: ridge;
+  border-width: 3px;
+}
+
+.Content {
+  /* float: left; */
+  width: 70%;
+  display: inline-block;
+  margin-left: 2%;
 }

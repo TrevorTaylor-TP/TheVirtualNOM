@@ -10,7 +10,7 @@ class SearchWindow extends React.Component {
     this.state = {
       address: "",
       sliderValue: 5,
-      ready: false
+      ready: false,
     };
   }
   handleChange = event => {
@@ -49,17 +49,18 @@ class SearchWindow extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
-          <p></p>
-          <div>Radius: {this.state.sliderValue}</div>
+          <div style={{ marginTop: 10 }}>Radius: {this.state.sliderValue}</div>
           <Slider handleSliderChange={this.handleSliderChange}></Slider>
-          <button onClick={this.state.address ? this.handleClickFunction : null}>
+          <button
+            onClick={this.state.address ? this.handleClickFunction : null}
+          >
             Search
           </button>
           <SearchResults
             location={this.state.address}
             ready={this.state.ready}
             handleSetReady={this.handleSetReady}
-            sliderValue = {this.state.sliderValue}
+            sliderValue={this.state.sliderValue}
           />
         </div>
       </div>
