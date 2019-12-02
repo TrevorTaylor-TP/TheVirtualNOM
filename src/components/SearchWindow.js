@@ -10,14 +10,18 @@ class SearchWindow extends React.Component {
     this.state = {
       address: "",
       sliderValue: 5,
-      ready: false,
+      ready: false
     };
   }
   handleChange = event => {
     this.setState({ address: event.target.value });
     console.log(this.state.address);
   };
-
+  handleKeyPress = event => {
+    if (event.key === "Enter") {
+      this.handleClickFunction();
+    }
+  };
   handleSliderChange = event => {
     this.setState({ sliderValue: event });
     // console.log("event : ", event)
@@ -28,7 +32,7 @@ class SearchWindow extends React.Component {
   };
 
   handleClickFunction = () => {
-    this.alertFunction(this.state.address);
+    //this.alertFunction(this.state.address);
     this.setState({ ready: true });
   };
 
@@ -47,6 +51,7 @@ class SearchWindow extends React.Component {
               type="text"
               value={this.state.address}
               onChange={this.handleChange}
+              onKeyUp={this.handleKeyPress}
             ></input>
           </div>
           <div style={{ marginTop: 10 }}>Radius: {this.state.sliderValue}</div>

@@ -17,6 +17,7 @@
 .Rest_Card {
   border-style: ridge;
   border-width: 3px;
+  background-color: rgba(221, 169, 177, 0.514);
 }
 
 .Content {
