@@ -7,8 +7,8 @@
 }
 
 .Image_Holder {
-  margin-right: 70%;
-  width: auto;
+  /* margin-right: 70%; */
+  width: 7rem;
   height: 7rem;
   position: relative;
   display: inline-block;
