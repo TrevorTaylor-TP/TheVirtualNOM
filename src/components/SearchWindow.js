@@ -3,7 +3,7 @@ import SearchResults from "../components/SearchResults";
 import "../styleSheets/SearchWindow.css";
 import Slider from "../components/DistanceSlider";
 import "../styleSheets/Slider.css";
-
+import "../styleSheets/SearchWindow.css";
 class SearchWindow extends React.Component {
   constructor(props) {
     super(props);
@@ -44,10 +44,11 @@ class SearchWindow extends React.Component {
     return (
       <div>
         <div>
-          <h1>The Virtual N.O.M</h1>
+          <h1>Welcome to The Virtual N.O.M!</h1>
           <div>
             Enter your location:
             <input
+              id="search-bar"
               type="text"
               value={this.state.address}
               onChange={this.handleChange}
