@@ -3,29 +3,51 @@
   position: absolute;
   min-height: 100%;
   max-width: 100%;
+  min-width: 50%;
 }
 
 .Image_Holder {
-  width: 7rem;
+  margin-right: 70%;
+  width: auto;
   height: 7rem;
   position: relative;
   display: inline-block;
   overflow: hidden;
   margin: 0;
   border-radius: 40px 0px 40px 0px;
+  border-width: 4px;
+  border-style: groove;
 }
 
 .Rest_Card {
+  width: auto;
   border-style: ridge;
   border-width: 3px;
-  background-color: rgba(221, 169, 177, 0.514);
+  background-color: rgb(212, 212, 206);
   border-radius: 40px 10px 40px 10px;
 }
 
 .Content {
-  position: absolute;
-  width: auto;
+  /* position: absolute; */
+  /* width: 70%; */
   display: inline-block;
-  margin-left: 9%;
+  /* margin-left: 30%; */
   text-align: left;
+  margin-top: 1vh;
+  margin-bottom: auto;
+  overflow: hidden;
+}
+
+.Content a {
+  font-size: x-large;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.Content a:link {
+  color: steelblue;
+}
+
+.Content #distance {
+  color: lightslategray;
 }

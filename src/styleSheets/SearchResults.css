@@ -8,11 +8,16 @@
 }
 
 .resultContainer ul {
-  list-style-type: none;
-  margin: 0;
+  list-style-type: disc;
+  margin-bottom: 2%;
   padding: 0;
   fill-opacity: 0;
   background-color: rgba(255, 255, 255, 0);
+  columns: 2;
+  list-style-position: inside;
+  /* width: 60%;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
 .resultContainer ul li {
@@ -21,15 +26,16 @@
   display: block;
   /*set background color here*/
   background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 1%;
 }
 
 .resultContainer {
   /* border: 1px darkblue inset; */
   /* background-color: lightgray; */
   align-content: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1%;
-  /* width: 70%; */
+  width: 80%;
   /* height: 70%; */
 }

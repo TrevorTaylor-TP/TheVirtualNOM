@@ -24,23 +24,23 @@ export default function RestaurantCard(props) {
 
       <div className="Content">
         <a href={props.children.url} target="_blank" rel="noopener noreferrer">
-          <div>{props.children.name}</div>
+          <p id="name">{props.children.name}</p>
         </a>
-        <div>{props.children.price}</div>
+        <p id="price">{props.children.price}</p>
+        <br></br>
         <div>
           {json.map((item, i) => {
             return <div>{item}</div>;
           })}
-          <div>
+          <p id="distance">
             About{" "}
             {parseInt(props.children.distance / MetersPerMiles) <= 1.0
               ? 1 + " mile "
               : parseInt(props.children.distance / MetersPerMiles) +
                 " miles "}{" "}
             away
-          </div>
+          </p>
         </div>
-        <br></br>
       </div>
     </div>
   );
