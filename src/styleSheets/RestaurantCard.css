@@ -12,17 +12,20 @@
   display: inline-block;
   overflow: hidden;
   margin: 0;
+  border-radius: 40px 0px 40px 0px;
 }
 
 .Rest_Card {
   border-style: ridge;
   border-width: 3px;
   background-color: rgba(221, 169, 177, 0.514);
+  border-radius: 40px 10px 40px 10px;
 }
 
 .Content {
-  /* float: left; */
-  width: 70%;
+  position: absolute;
+  width: auto;
   display: inline-block;
-  margin-left: 2%;
+  margin-left: 9%;
+  text-align: left;
 }
