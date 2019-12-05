@@ -9,7 +9,6 @@ export default function RestaurantCard(props) {
   // console.log("asdf1",resObj)
   for (var key in resObj) {
     json.push(resObj.title[key]);
-    // console.log('json.title',resObj.title[key])
   }
 
   return (

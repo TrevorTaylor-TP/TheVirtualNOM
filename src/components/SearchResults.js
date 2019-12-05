@@ -43,7 +43,7 @@ class SearchResults extends React.Component {
 
   render() {
     var resObj = this.state.apiResponse.slice();
-    console.log("asdf2", resObj);
+    //console.log("asdf2", resObj);
     for (var key in resObj) {
       json.push(resObj[key]);
     }
