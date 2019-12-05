@@ -15,7 +15,7 @@ class SearchResults extends React.Component {
   callAPI(location, radius) {
     radius *= 1600;
     const queryString =
-      "https://vnom-api-production.herokuapp.com /search/?location=" +
+      "https://vnom-api-production.herokuapp.com/search/?location=" +
       location +
       "&radius=" +
       radius;
@@ -25,7 +25,7 @@ class SearchResults extends React.Component {
       "&radius=" +
       radius;
     console.log("testString", testString);
-    // fetch("https://vnom-api-production.herokuapp.com /search/") //for testing from heroku
+    // fetch("https://vnom-api-production.herokuapp.com/search/") //for testing from heroku
     // fetch("http://localhost:9000/search") //for local testing
     fetch(queryString)
       // .then(res => res.json())
