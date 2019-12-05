@@ -10,54 +10,56 @@ class SearchWindow extends React.Component {
     this.state = {
       address: "",
       sliderValue: 5,
-      ready: false
+      ready: false,
     };
   }
   handleChange = event => {
     this.setState({ address: event.target.value });
-    console.log(this.state.address);
   };
-  handleKeyPress = event => {
-    if (event.key === "Enter") {
-      this.handleClickFunction();
-    }
-  };
+
+  // handleKeyPress = event => {
+  //   if (event.key === "Enter") {
+  //     this.setState({ ready: true });
+  //   }
+  // };
+
   handleSliderChange = event => {
     this.setState({ sliderValue: event });
     // console.log("event : ", event)
   };
 
-  handleSetReady = event => {
-    this.setState({ ready: event });
-  };
+  // handleSetReady = event => {
+  //   this.setState({ ready: event });
+  // };
 
   handleClickFunction = () => {
-    //this.alertFunction(this.state.address);
     this.setState({ ready: true });
   };
 
-  alertFunction(e) {
-    // e.preventDefault();
-    alert(e);
-  }
   render() {
     return (
       <div>
         <div>
           <h1>Welcome to The Virtual N.O.M!</h1>
-          <div>
+          <label>
             Enter your location:
             <input
+              placeholder="Enter zip-code or address"
               id="search-bar"
               type="text"
               value={this.state.address}
               onChange={this.handleChange}
-              onKeyUp={this.handleKeyPress}
+              onKeyUp={event => {
+                if (event.key === "Enter") {
+                  this.setState({ ready: true });
+                }
+              }}
             ></input>
-          </div>
+          </label>
           <div style={{ marginTop: 10 }}>Radius: {this.state.sliderValue}</div>
           <Slider handleSliderChange={this.handleSliderChange}></Slider>
           <button
+            type="button"
             onClick={this.state.address ? this.handleClickFunction : null}
           >
             Search
@@ -65,7 +67,9 @@ class SearchWindow extends React.Component {
           <SearchResults
             location={this.state.address}
             ready={this.state.ready}
-            handleSetReady={this.handleSetReady}
+            handleSetReady={event => {
+              this.setState({ ready: event });
+            }}
             sliderValue={this.state.sliderValue}
           />
         </div>

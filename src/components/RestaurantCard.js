@@ -27,7 +27,7 @@ export default function RestaurantCard(props) {
           <p id="name">{props.children.name}</p>
         </a>
         <p id="price">{props.children.price}</p>
-        <br></br>
+        {/* <br></br> */}
         <div>
           {json.map((item, i) => {
             return <div>{item}</div>;
