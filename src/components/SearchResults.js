@@ -25,6 +25,7 @@ class SearchResults extends React.Component {
       "&radius=" +
       radius;
     console.log("testString", testString);
+    console.log("queryString", queryString);
     // fetch("https://vnom-api-production.herokuapp.com/search/") //for testing from heroku
     // fetch("http://localhost:9000/search") //for local testing
     fetch(queryString)
