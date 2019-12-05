@@ -14,16 +14,25 @@ class SearchResults extends React.Component {
 
   callAPI(location, radius) {
     radius *= 1600;
-    const queryString = "https://thevirtualnomapiproduction.herokuapp.com/search/?location=" + location+ "&radius=" + radius;
-    const testString = "http://localhost:9000/search/?location=" + location+ "&radius=" + radius;
-    console.log('testString', testString)
-    // fetch("https://thevirtualnomapiproduction.herokuapp.com/search/")
-    // fetch("http://localhost:9000/search")
+    const queryString =
+      "https://vnom-api-production.herokuapp.com /search/?location=" +
+      location +
+      "&radius=" +
+      radius;
+    const testString =
+      "http://localhost:9000/search/?location=" +
+      location +
+      "&radius=" +
+      radius;
+    console.log("testString", testString);
+    // fetch("https://vnom-api-production.herokuapp.com /search/") //for testing from heroku
+    // fetch("http://localhost:9000/search") //for local testing
     fetch(queryString)
       // .then(res => res.json())
       .then(res => res.json())
       .then(res => this.setState({ apiResponse: res }));
   }
+
   componentDidUpdate() {
     // console.log("in mount", this.props.ready)
     if (this.props.ready) {
@@ -38,7 +47,6 @@ class SearchResults extends React.Component {
     for (var key in resObj) {
       json.push(resObj[key]);
     }
-    // console.log(json);
 
     return (
       <div className="resultContainer">
