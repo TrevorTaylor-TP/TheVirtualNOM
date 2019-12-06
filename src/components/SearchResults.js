@@ -14,16 +14,37 @@ class SearchResults extends React.Component {
 
   callAPI(location, radius) {
     radius *= 1600;
-    let offset = 50;
+    let offset = 0;
     let limit = 50;
-    const queryString = `https://vnom-api-production.herokuapp.com/search/?location=${location}&limit=${limit}&offset=${offset}&radius=${radius}`;
-    const testString = `http://localhost:9000/search/?location=${location}&radius=${radius}`;
+    let sort_by = "distance";
+    const queryString =
+      "https://vnom-api-production.herokuapp.com/search/?location=" +
+      location +
+      "&limit=" +
+      limit +
+      "&offset=" +
+      offset +
+      "&radius=" +
+      radius +
+      "&sort_by=" +
+      sort_by;
+    const testString =
+      "http://localhost:9000/search/?location=" +
+      location +
+      "&limit=" +
+      limit +
+      "&offset=" +
+      offset +
+      "&radius=" +
+      radius +
+      "&sort_by=" +
+      sort_by;
     console.log("testString", testString);
     console.log("queryString", queryString);
     console.log(`radius ${radius}`);
     // fetch("https://vnom-api-production.herokuapp.com/search/") //for testing from heroku
     // fetch("http://localhost:9000/search") //for local testing
-    fetch(queryString)
+    fetch(testString)
       // .then(res => res.json())
       .then(res => res.json())
       .then(res => this.setState({ apiResponse: res }));
