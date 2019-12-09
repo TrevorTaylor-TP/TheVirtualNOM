@@ -32,13 +32,12 @@
   width: 80%;
   height: auto;
   display: block;
-  /* margin-left: auto; */
   float: right;
   text-align: center;
   margin: 0;
   margin-bottom: auto;
-  /* padding-right: 20%; */
-  /* overflow: hidden; */
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .Content a {
