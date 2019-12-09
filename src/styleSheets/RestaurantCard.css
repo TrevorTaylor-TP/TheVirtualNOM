@@ -1,0 +1,55 @@
+.List_Image {
+  display: block;
+  position: absolute;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 50%;
+}
+
+.Image_Holder {
+  /* margin-right: 70%; */
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 40px 0px 40px 0px;
+  border-width: 4px;
+  border-style: groove;
+}
+
+.Rest_Card {
+  width: auto;
+  border-style: ridge;
+  border-width: 3px;
+  background-color: rgb(212, 212, 206);
+  border-radius: 40px 10px 40px 10px;
+}
+
+.Content {
+  position: relative;
+  width: 80%;
+  height: auto;
+  display: block;
+  float: right;
+  text-align: center;
+  margin: 0;
+  margin-bottom: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.Content a {
+  font-size: x-large;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.Content a:link {
+  color: steelblue;
+}
+
+.Content #distance {
+  color: lightslategray;
+}
