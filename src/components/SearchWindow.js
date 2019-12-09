@@ -68,14 +68,6 @@ class SearchWindow extends React.Component {
                 type="text"
                 value={this.state.address}
                 onChange={this.handleChange}
-                onKeyUp={event => {
-                  if (event.key === "Enter") {
-                    this.setState({
-                      ready: true,
-                      address: document.getElementById("search-bar").value,
-                    });
-                  }
-                }}
                 onReset={this.handleRefresh}
               ></input>
             </label>
@@ -95,7 +87,7 @@ class SearchWindow extends React.Component {
             handleSetReady={event => {
               this.setState({
                 ready: event,
-                //address: document.getElementById("search-bar").value,
+                address: "",
               });
             }}
             onReset={this.resetItem ? this.handleRefresh : false}
