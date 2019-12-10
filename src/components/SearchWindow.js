@@ -12,7 +12,7 @@ class SearchWindow extends React.Component {
       address: "",
       sliderValue: 5,
       ready: false,
-      resetItem: false,
+      resetItem: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -48,13 +48,21 @@ class SearchWindow extends React.Component {
   handleSubmit = event => {
     this.setState({
       ready: true,
-      resetItem: true,
+      resetItem: true
     });
     event.preventDefault();
   };
 
+  componentDidMount() {
+    if (document.getElementById("search-bar") === null) {
+      return "";
+    } else {
+      return document.getElementById("search-bar").value;
+    }
+  }
+
   render() {
-    // let content = this.componentDidUpdate();
+    let content = this.componentDidMount();
     return (
       <div>
         <div>
@@ -66,9 +74,9 @@ class SearchWindow extends React.Component {
                 placeholder="Enter zip-code or address"
                 id="search-bar"
                 type="text"
-                value={this.state.address}
-                onChange={this.handleChange}
-                onReset={this.handleRefresh}
+                // value={this.state.address}
+                // onChange={this.handleChange}
+                // onReset={this.handleRefresh}
               ></input>
             </label>
             <div style={{ marginTop: 10 }}>
@@ -82,12 +90,12 @@ class SearchWindow extends React.Component {
             ></input>
           </form>
           <SearchResults
-            location={this.state.address}
+            location={content}
             ready={this.state.ready}
             handleSetReady={event => {
               this.setState({
                 ready: event,
-                address: "",
+                address: ""
               });
             }}
             onReset={this.resetItem ? this.handleRefresh : false}
