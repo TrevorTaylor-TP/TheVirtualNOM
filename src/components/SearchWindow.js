@@ -17,7 +17,7 @@ class SearchWindow extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleRefresh = this.handleRefresh.bind(this);
+    // this.handleRefresh = this.handleRefresh.bind(this);
   }
 
   handleChange = event => {
@@ -35,9 +35,9 @@ class SearchWindow extends React.Component {
     // console.log("event : ", event)
   };
 
-  // handleSetReady = event => {
-  //   this.setState({ ready: event });
-  // };
+  handleSetReady = event => {
+    this.setState({ ready: event });
+  };
 
   handleSubmit = event => {
     this.setState({
