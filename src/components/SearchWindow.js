@@ -12,7 +12,7 @@ class SearchWindow extends React.Component {
       address: "",
       sliderValue: 5,
       ready: false,
-      resetItem: false
+      resetItem: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,16 +24,10 @@ class SearchWindow extends React.Component {
     this.setState({ address: event.target.value });
   };
 
-  handleRefresh = event => {
-    let obj = event.target.id;
-    console.log(`object to get refreshed: ${obj}`);
-    obj.reset();
-  };
-
-  // handleKeyPress = event => {
-  //   if (event.key === "Enter") {
-  //     this.setState({ ready: true });
-  //   }
+  // handleRefresh = event => {
+  //   let obj = event.target.id;
+  //   console.log(`object to get refreshed: ${obj}`);
+  //   obj.reset();
   // };
 
   handleSliderChange = event => {
@@ -48,7 +42,7 @@ class SearchWindow extends React.Component {
   handleSubmit = event => {
     this.setState({
       ready: true,
-      resetItem: true
+      resetItem: true,
     });
     event.preventDefault();
   };
@@ -95,10 +89,10 @@ class SearchWindow extends React.Component {
             handleSetReady={event => {
               this.setState({
                 ready: event,
-                address: ""
+                address: "",
               });
             }}
-            onReset={this.resetItem ? this.handleRefresh : false}
+            // onReset={this.resetItem ? this.handleRefresh : false}
             sliderValue={this.state.sliderValue}
           />
         </div>

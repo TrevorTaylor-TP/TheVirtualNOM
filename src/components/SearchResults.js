@@ -49,7 +49,7 @@ class SearchResults extends React.Component {
     // console.log("in mount", this.props.ready)
     if (this.props.ready) {
       this.callAPI(this.props.location, this.props.sliderValue);
-      this.props.handleSetReady(false);
+      this.props.ready = false;
     }
   }
 
