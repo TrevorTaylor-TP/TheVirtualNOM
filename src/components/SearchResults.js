@@ -67,7 +67,7 @@ class SearchResults extends React.Component {
             return (
               <li key={i}>
                 {/* <RestaurantCard>{item.name}</RestaurantCard> */}
-                <RestaurantCard>{item}</RestaurantCard>
+                <RestaurantCard cardData={item} />
               </li>
             );
           })}
