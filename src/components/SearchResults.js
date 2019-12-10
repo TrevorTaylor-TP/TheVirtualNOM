@@ -39,8 +39,8 @@ class SearchResults extends React.Component {
       radius +
       "&sort_by=" +
       sort_by;
-    // fetch(testString) //for local testing
-    fetch(queryString) //for heroku connection
+    fetch(testString) //for local testing
+      // fetch(queryString) //for heroku connection
       .then(res => res.json())
       .then(res => this.setState({ apiResponse: res }));
   }

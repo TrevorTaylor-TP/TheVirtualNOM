@@ -17,7 +17,7 @@ export default function RestaurantCard(props) {
         <img
           className="List_Image"
           src={props.children.image_url}
-          alt="Boo!"
+          alt="  Restaurant Food"
         ></img>
       </div>
 
