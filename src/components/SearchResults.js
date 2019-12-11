@@ -17,6 +17,7 @@ class SearchResults extends React.Component {
     let offset = 0;
     let limit = 50;
     let sort_by = "distance";
+    let term = "restaurant";
     const queryString =
       "https://vnom-api-production.herokuapp.com/search/?location=" +
       location +
@@ -27,7 +28,9 @@ class SearchResults extends React.Component {
       "&radius=" +
       radius +
       "&sort_by=" +
-      sort_by;
+      sort_by +
+      "&term=" +
+      term;
     const testString =
       "http://localhost:9000/search/?location=" +
       location +
@@ -38,7 +41,9 @@ class SearchResults extends React.Component {
       "&radius=" +
       radius +
       "&sort_by=" +
-      sort_by;
+      sort_by +
+      "&term=" +
+      term;
     fetch(queryString) //for local testing
       // fetch(queryString) //for heroku connection
       .then(res => res.json())
@@ -67,7 +72,7 @@ class SearchResults extends React.Component {
             return (
               <li key={i}>
                 {/* <RestaurantCard>{item.name}</RestaurantCard> */}
-                <RestaurantCard>{item}</RestaurantCard>
+                <RestaurantCard cardData={item} />
               </li>
             );
           })}

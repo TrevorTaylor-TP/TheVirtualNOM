@@ -12,7 +12,7 @@ class SearchWindow extends React.Component {
       address: "",
       sliderValue: 5,
       ready: false,
-      resetItem: false,
+      //resetItem: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -42,7 +42,7 @@ class SearchWindow extends React.Component {
   handleSubmit = event => {
     this.setState({
       ready: true,
-      resetItem: true,
+      //resetItem: true,
     });
     event.preventDefault();
   };
