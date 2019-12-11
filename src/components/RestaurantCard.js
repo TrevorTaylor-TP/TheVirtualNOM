@@ -4,12 +4,7 @@ var json = [];
 const MetersPerMiles = 1609.34;
 
 export default function RestaurantCard(props) {
-  // console.log("in Props card " + props.categories);
-  // var resObj = props.categories;
   console.log("props categories", props.cardData.categories);
-  // for (var key in resObj) {
-  //   json.push(resObj.title[key]);
-  // }
 
   return (
     <div className="Rest_Card">
